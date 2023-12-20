@@ -37,7 +37,7 @@ passwordResetRoute.post("/password-reset", async (req, res) => {
       }).save();
     }
 
-    const url = `https://password-reset-charankannag.netlify.app/reset/${user._id}/${token.token}/`;
+    const url = `https://password-reset-gokulrajnan.netlify.app/reset/${user._id}/${token.token}/`;
     // http://localhost:3000/reset
     await sendMail(user.email, "Password Reset", url);
     res.status(200).send({
